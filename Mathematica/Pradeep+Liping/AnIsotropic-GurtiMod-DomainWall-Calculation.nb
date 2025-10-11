@@ -1,0 +1,1915 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     73251,       1908]
+NotebookOptionsPosition[     70902,       1866]
+NotebookOutlinePosition[     71328,       1883]
+CellTagsIndexPosition[     71285,       1880]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "This", " ", "is", " ", "for", " ", "some", " ", "algebra", " ", "that", 
+    " ", "was", " ", "done", " ", "for", " ", "the", " ", "overleaf", " ", 
+    "\"\<Superconductivity-Pradeep+Liping/Latex. \
+Z-Supercomnductivity-Gurtin/Section. Gurtin Tensor Modification/Paragraph. \
+Minimal Counter-Example\>\""}], " ", "*)"}]}]}], "Input",
+ CellChangeTimes->{{3.904500904353797*^9, 3.904500914777012*^9}, {
+  3.904502193249302*^9, 3.9045021943634033`*^9}, {3.9045024539555902`*^9, 
+  3.904502560232319*^9}},
+ CellLabel->
+  "In[781]:=",ExpressionUUID->"3a1346d9-983f-4eb6-8df8-7220bb7728d3"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"(*", 
+    RowBox[{
+    "Section", " ", "that", " ", "deals", " ", "with", " ", "the", " ", 
+     "diagonal", " ", "tesnor", " ", 
+     RowBox[{"form", ".", " ", "This"}], " ", "is", " ", 
+     RowBox[{"diagonal", "."}]}], "*)"}], "Title"], 
+  StyleBox["\[IndentingNewLine]", "Title"], 
+  RowBox[{
+   RowBox[{"Q", ":=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Q1", "*", 
+          SuperscriptBox[
+           RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "+", 
+         RowBox[{"Q2", "*", 
+          SuperscriptBox[
+           RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}], ",", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"Q2", "-", "Q1"}], ")"}], "*", 
+         RowBox[{"Sin", "[", "\[Alpha]", "]"}], "*", 
+         RowBox[{"Cos", "[", "\[Alpha]", "]"}]}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"Q2", "-", "Q1"}], ")"}], "*", 
+         RowBox[{"Sin", "[", "\[Alpha]", "]"}], "*", 
+         RowBox[{"Cos", "[", "\[Alpha]", "]"}]}], ",", 
+        RowBox[{
+         RowBox[{"Q2", "*", 
+          SuperscriptBox[
+           RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "+", 
+         RowBox[{"Q1", "*", 
+          SuperscriptBox[
+           RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}]}], "}"}]}], 
+     "}"}]}], "\[IndentingNewLine]", 
+   RowBox[{"Print", "[", 
+    RowBox[{"\"\<Q=\>\"", ",", 
+     RowBox[{"Q", "//", "MatrixForm"}]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Print", "[", 
+    RowBox[{"\"\<Q.Q=\>\"", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Q", ".", "Q"}], "//", "Simplify"}], "//", "MatrixForm"}]}], 
+    "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Print", "[", 
+    RowBox[{"\"\<\!\(\*SuperscriptBox[\(Q\), \(T\)]\)Q.(A,B)=\>\"", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Q", ".", "Q", ".", 
+        RowBox[{"Transpose", "[", 
+         RowBox[{"{", 
+          RowBox[{"A", ",", "B"}], "}"}], "]"}]}], "//", "Simplify"}], "//", 
+      "MatrixForm"}]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Print", "[", 
+    RowBox[{
+    "\"\<\!\(\*SuperscriptBox[\(Q\), \(T\)]\)Q.(A,B) with A substituted=\>\"",
+      ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Q", ".", "Q", ".", 
+        RowBox[{"Transpose", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", 
+             RowBox[{"(", 
+              FractionBox[
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", 
+                   SuperscriptBox["Q1", "2"]}], "+", 
+                  SuperscriptBox["Q2", "2"]}], ")"}], " ", 
+                RowBox[{"Cos", "[", "\[Alpha]", "]"}], "*", 
+                RowBox[{"Sin", "[", "\[Alpha]", "]"}]}], 
+               RowBox[{
+                RowBox[{
+                 SuperscriptBox["Q1", "2"], " ", 
+                 SuperscriptBox[
+                  RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "+", 
+                RowBox[{
+                 SuperscriptBox["Q2", "2"], " ", 
+                 SuperscriptBox[
+                  RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}]], ")"}]}], 
+            "*", "B"}], ",", "B"}], "}"}], "]"}]}], "//", "Simplify"}], "//", 
+      "MatrixForm"}]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Print", "[", 
+    RowBox[{"\"\<Q.(A,B)=\>\"", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Q", ".", 
+        RowBox[{"Transpose", "[", 
+         RowBox[{"{", 
+          RowBox[{"A", ",", "B"}], "}"}], "]"}]}], "//", "Simplify"}], "//", 
+      "MatrixForm"}]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Print", "[", 
+    RowBox[{"\"\<(Q.(A,B)\!\(\*SuperscriptBox[\()\), \(2\)]\)=\>\"", ",", 
+     RowBox[{"Q", ".", 
+      RowBox[{"Transpose", "[", 
+       RowBox[{"{", 
+        RowBox[{"A", ",", "B"}], "}"}], "]"}], ".", 
+      RowBox[{"Transpose", "[", 
+       RowBox[{"Q", ".", 
+        RowBox[{"Transpose", "[", 
+         RowBox[{"{", 
+          RowBox[{"A", ",", "B"}], "}"}], "]"}]}], "]"}]}]}], "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"Print", "[", 
+    RowBox[{"\"\<Q.(A,B) with A substituted=\>\"", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"Q", ".", 
+         RowBox[{"Transpose", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", 
+              RowBox[{"(", 
+               FractionBox[
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"-", 
+                    SuperscriptBox["Q1", "2"]}], "+", 
+                   SuperscriptBox["Q2", "2"]}], ")"}], " ", 
+                 RowBox[{"Cos", "[", "\[Alpha]", "]"}], "*", 
+                 RowBox[{"Sin", "[", "\[Alpha]", "]"}]}], 
+                RowBox[{
+                 RowBox[{
+                  SuperscriptBox["Q1", "2"], " ", 
+                  SuperscriptBox[
+                   RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "+", 
+                 RowBox[{
+                  SuperscriptBox["Q2", "2"], " ", 
+                  SuperscriptBox[
+                   RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}]], ")"}]}], 
+             "*", "B"}], ",", "B"}], "}"}], "]"}]}], "//", "Expand"}], "//", 
+       "Simplify"}], "//", "MatrixForm"}]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Print", "[", 
+    RowBox[{
+    "\"\<(Q.(A,B)\!\(\*SuperscriptBox[\()\), \(2\)]\)with A substituted for Q \
+and B=\>\"", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Q", ".", 
+        RowBox[{"Transpose", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", 
+             RowBox[{"(", 
+              FractionBox[
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", 
+                   SuperscriptBox["Q1", "2"]}], "+", 
+                  SuperscriptBox["Q2", "2"]}], ")"}], " ", 
+                RowBox[{"Cos", "[", "\[Alpha]", "]"}], "*", 
+                RowBox[{"Sin", "[", "\[Alpha]", "]"}]}], 
+               RowBox[{
+                RowBox[{
+                 SuperscriptBox["Q1", "2"], " ", 
+                 SuperscriptBox[
+                  RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "+", 
+                RowBox[{
+                 SuperscriptBox["Q2", "2"], " ", 
+                 SuperscriptBox[
+                  RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}]], ")"}]}], 
+            "*", "B"}], ",", "B"}], "}"}], "]"}], ".", 
+        RowBox[{"Transpose", "[", 
+         RowBox[{"Q", ".", 
+          RowBox[{"Transpose", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", 
+               RowBox[{"(", 
+                FractionBox[
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"-", 
+                    SuperscriptBox["Q1", "2"]}], "+", 
+                    SuperscriptBox["Q2", "2"]}], ")"}], " ", 
+                  RowBox[{"Cos", "[", "\[Alpha]", "]"}], "*", 
+                  RowBox[{"Sin", "[", "\[Alpha]", "]"}]}], 
+                 RowBox[{
+                  RowBox[{
+                   SuperscriptBox["Q1", "2"], " ", 
+                   SuperscriptBox[
+                    RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "+", 
+                  RowBox[{
+                   SuperscriptBox["Q2", "2"], " ", 
+                   SuperscriptBox[
+                    RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}]], ")"}]}],
+               "*", "B"}], ",", "B"}], "}"}], "]"}]}], "]"}]}], "//", 
+       "Simplify"}], "//", "MatrixForm"}]}], "]"}], 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.908051486030031*^9, 3.908051521781097*^9}},
+ CellLabel->
+  "In[782]:=",ExpressionUUID->"0bc2eed2-2d2a-4188-80bf-6521c53bba76"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Q=\"\>", "\[InvisibleSpace]", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {
+        RowBox[{
+         RowBox[{"Q1", " ", 
+          SuperscriptBox[
+           RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "+", 
+         RowBox[{"Q2", " ", 
+          SuperscriptBox[
+           RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}], 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "Q1"}], "+", "Q2"}], ")"}], " ", 
+         RowBox[{"Cos", "[", "\[Alpha]", "]"}], " ", 
+         RowBox[{"Sin", "[", "\[Alpha]", "]"}]}]},
+       {
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "Q1"}], "+", "Q2"}], ")"}], " ", 
+         RowBox[{"Cos", "[", "\[Alpha]", "]"}], " ", 
+         RowBox[{"Sin", "[", "\[Alpha]", "]"}]}], 
+        RowBox[{
+         RowBox[{"Q2", " ", 
+          SuperscriptBox[
+           RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "+", 
+         RowBox[{"Q1", " ", 
+          SuperscriptBox[
+           RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}]}
+      },
+      GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]]}],
+  SequenceForm["Q=", 
+   MatrixForm[{{$CellContext`Q1 
+       Cos[$CellContext`\[Alpha]]^2 + $CellContext`Q2 
+       Sin[$CellContext`\[Alpha]]^2, (-$CellContext`Q1 + $CellContext`Q2) 
+      Cos[$CellContext`\[Alpha]] 
+      Sin[$CellContext`\[Alpha]]}, {(-$CellContext`Q1 + $CellContext`Q2) 
+      Cos[$CellContext`\[Alpha]] 
+      Sin[$CellContext`\[Alpha]], $CellContext`Q2 
+       Cos[$CellContext`\[Alpha]]^2 + $CellContext`Q1 
+       Sin[$CellContext`\[Alpha]]^2}}]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.917547195273306*^9},
+ CellLabel->
+  "During evaluation of \
+In[782]:=",ExpressionUUID->"825bc17f-d2e3-4b8b-8610-049a4924256b"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Q.Q=\"\>", "\[InvisibleSpace]", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {
+        RowBox[{
+         RowBox[{
+          SuperscriptBox["Q1", "2"], " ", 
+          SuperscriptBox[
+           RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "+", 
+         RowBox[{
+          SuperscriptBox["Q2", "2"], " ", 
+          SuperscriptBox[
+           RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}], 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", 
+            SuperscriptBox["Q1", "2"]}], "+", 
+           SuperscriptBox["Q2", "2"]}], ")"}], " ", 
+         RowBox[{"Cos", "[", "\[Alpha]", "]"}], " ", 
+         RowBox[{"Sin", "[", "\[Alpha]", "]"}]}]},
+       {
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", 
+            SuperscriptBox["Q1", "2"]}], "+", 
+           SuperscriptBox["Q2", "2"]}], ")"}], " ", 
+         RowBox[{"Cos", "[", "\[Alpha]", "]"}], " ", 
+         RowBox[{"Sin", "[", "\[Alpha]", "]"}]}], 
+        RowBox[{
+         RowBox[{
+          SuperscriptBox["Q2", "2"], " ", 
+          SuperscriptBox[
+           RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "+", 
+         RowBox[{
+          SuperscriptBox["Q1", "2"], " ", 
+          SuperscriptBox[
+           RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}]}
+      },
+      GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]]}],
+  SequenceForm["Q.Q=", 
+   MatrixForm[{{$CellContext`Q1^2 
+       Cos[$CellContext`\[Alpha]]^2 + $CellContext`Q2^2 
+       Sin[$CellContext`\[Alpha]]^2, (-$CellContext`Q1^2 + $CellContext`Q2^2) 
+      Cos[$CellContext`\[Alpha]] 
+      Sin[$CellContext`\[Alpha]]}, {(-$CellContext`Q1^2 + $CellContext`Q2^2) 
+      Cos[$CellContext`\[Alpha]] 
+      Sin[$CellContext`\[Alpha]], $CellContext`Q2^2 
+       Cos[$CellContext`\[Alpha]]^2 + $CellContext`Q1^2 
+       Sin[$CellContext`\[Alpha]]^2}}]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.917547195349612*^9},
+ CellLabel->
+  "During evaluation of \
+In[782]:=",ExpressionUUID->"072d3346-58ba-41b6-892d-193ebd4eb134"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\!\\(\\*SuperscriptBox[\\(Q\\), \\(T\\)]\\)Q.(A,B)=\"\>", 
+   "\[InvisibleSpace]", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", 
+     TagBox[GridBox[{
+        {
+         RowBox[{
+          RowBox[{"A", " ", 
+           SuperscriptBox["Q1", "2"], " ", 
+           SuperscriptBox[
+            RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "-", 
+          RowBox[{"B", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             SuperscriptBox["Q1", "2"], "-", 
+             SuperscriptBox["Q2", "2"]}], ")"}], " ", 
+           RowBox[{"Cos", "[", "\[Alpha]", "]"}], " ", 
+           RowBox[{"Sin", "[", "\[Alpha]", "]"}]}], "+", 
+          RowBox[{"A", " ", 
+           SuperscriptBox["Q2", "2"], " ", 
+           SuperscriptBox[
+            RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}]},
+        {
+         RowBox[{
+          RowBox[{"B", " ", 
+           SuperscriptBox["Q2", "2"], " ", 
+           SuperscriptBox[
+            RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "-", 
+          RowBox[{"A", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             SuperscriptBox["Q1", "2"], "-", 
+             SuperscriptBox["Q2", "2"]}], ")"}], " ", 
+           RowBox[{"Cos", "[", "\[Alpha]", "]"}], " ", 
+           RowBox[{"Sin", "[", "\[Alpha]", "]"}]}], "+", 
+          RowBox[{"B", " ", 
+           SuperscriptBox["Q1", "2"], " ", 
+           SuperscriptBox[
+            RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.5599999999999999]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      Column], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]]}],
+  SequenceForm["\!\(\*SuperscriptBox[\(Q\), \(T\)]\)Q.(A,B)=", 
+   MatrixForm[{$CellContext`A $CellContext`Q1^2 
+      Cos[$CellContext`\[Alpha]]^2 - $CellContext`B ($CellContext`Q1^2 - \
+$CellContext`Q2^2) Cos[$CellContext`\[Alpha]] 
+     Sin[$CellContext`\[Alpha]] + $CellContext`A $CellContext`Q2^2 
+      Sin[$CellContext`\[Alpha]]^2, $CellContext`B $CellContext`Q2^2 
+      Cos[$CellContext`\[Alpha]]^2 - $CellContext`A ($CellContext`Q1^2 - \
+$CellContext`Q2^2) Cos[$CellContext`\[Alpha]] 
+     Sin[$CellContext`\[Alpha]] + $CellContext`B $CellContext`Q1^2 
+      Sin[$CellContext`\[Alpha]]^2}]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.91754719545861*^9},
+ CellLabel->
+  "During evaluation of \
+In[782]:=",ExpressionUUID->"7800c2b6-bf3c-4bf6-a8b9-3f752c9ccc9a"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\!\\(\\*SuperscriptBox[\\(Q\\), \\(T\\)]\\)Q.(A,B) with A \
+substituted=\"\>", "\[InvisibleSpace]", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", 
+     TagBox[GridBox[{
+        {"0"},
+        {
+         FractionBox[
+          RowBox[{"B", " ", 
+           SuperscriptBox["Q1", "2"], " ", 
+           SuperscriptBox["Q2", "2"]}], 
+          RowBox[{
+           RowBox[{
+            SuperscriptBox["Q1", "2"], " ", 
+            SuperscriptBox[
+             RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "+", 
+           RowBox[{
+            SuperscriptBox["Q2", "2"], " ", 
+            SuperscriptBox[
+             RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.5599999999999999]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      Column], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]]}],
+  SequenceForm[
+  "\!\(\*SuperscriptBox[\(Q\), \(T\)]\)Q.(A,B) with A substituted=", 
+   MatrixForm[{
+    0, $CellContext`B $CellContext`Q1^2 $CellContext`Q2^2/($CellContext`Q1^2 
+      Cos[$CellContext`\[Alpha]]^2 + $CellContext`Q2^2 
+      Sin[$CellContext`\[Alpha]]^2)}]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.917547195474455*^9},
+ CellLabel->
+  "During evaluation of \
+In[782]:=",ExpressionUUID->"fd98a258-a94d-4538-baeb-95f6ff621831"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Q.(A,B)=\"\>", "\[InvisibleSpace]", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", 
+     TagBox[GridBox[{
+        {
+         RowBox[{
+          RowBox[{"B", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "Q1"}], "+", "Q2"}], ")"}], " ", 
+           RowBox[{"Cos", "[", "\[Alpha]", "]"}], " ", 
+           RowBox[{"Sin", "[", "\[Alpha]", "]"}]}], "+", 
+          RowBox[{"A", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"Q1", " ", 
+              SuperscriptBox[
+               RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "+", 
+             RowBox[{"Q2", " ", 
+              SuperscriptBox[
+               RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}], ")"}]}]}]},
+        {
+         RowBox[{
+          RowBox[{"A", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "Q1"}], "+", "Q2"}], ")"}], " ", 
+           RowBox[{"Cos", "[", "\[Alpha]", "]"}], " ", 
+           RowBox[{"Sin", "[", "\[Alpha]", "]"}]}], "+", 
+          RowBox[{"B", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"Q2", " ", 
+              SuperscriptBox[
+               RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "+", 
+             RowBox[{"Q1", " ", 
+              SuperscriptBox[
+               RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}], ")"}]}]}]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.5599999999999999]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      Column], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]]}],
+  SequenceForm["Q.(A,B)=", 
+   MatrixForm[{$CellContext`B (-$CellContext`Q1 + $CellContext`Q2) 
+      Cos[$CellContext`\[Alpha]] 
+      Sin[$CellContext`\[Alpha]] + $CellContext`A ($CellContext`Q1 
+        Cos[$CellContext`\[Alpha]]^2 + $CellContext`Q2 
+        Sin[$CellContext`\[Alpha]]^2), $CellContext`A (-$CellContext`Q1 + \
+$CellContext`Q2) Cos[$CellContext`\[Alpha]] 
+      Sin[$CellContext`\[Alpha]] + $CellContext`B ($CellContext`Q2 
+        Cos[$CellContext`\[Alpha]]^2 + $CellContext`Q1 
+        Sin[$CellContext`\[Alpha]]^2)}]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.917547195534053*^9},
+ CellLabel->
+  "During evaluation of \
+In[782]:=",ExpressionUUID->"e52a606d-373f-4f3a-b0e1-3987b852000b"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"(Q.(A,B)\\!\\(\\*SuperscriptBox[\\()\\), \\(2\\)]\\)=\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"A", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "Q1"}], "+", "Q2"}], ")"}], " ", 
+        RowBox[{"Cos", "[", "\[Alpha]", "]"}], " ", 
+        RowBox[{"Sin", "[", "\[Alpha]", "]"}]}], "+", 
+       RowBox[{"B", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Q2", " ", 
+           SuperscriptBox[
+            RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "+", 
+          RowBox[{"Q1", " ", 
+           SuperscriptBox[
+            RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}], ")"}]}]}], ")"}],
+      "2"], "+", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"B", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "Q1"}], "+", "Q2"}], ")"}], " ", 
+        RowBox[{"Cos", "[", "\[Alpha]", "]"}], " ", 
+        RowBox[{"Sin", "[", "\[Alpha]", "]"}]}], "+", 
+       RowBox[{"A", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Q1", " ", 
+           SuperscriptBox[
+            RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "+", 
+          RowBox[{"Q2", " ", 
+           SuperscriptBox[
+            RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}], ")"}]}]}], ")"}],
+      "2"]}]}],
+  SequenceForm[
+  "(Q.(A,B)\!\(\*SuperscriptBox[\()\), \(2\)]\)=", ($CellContext`A \
+(-$CellContext`Q1 + $CellContext`Q2) Cos[$CellContext`\[Alpha]] 
+      Sin[$CellContext`\[Alpha]] + $CellContext`B ($CellContext`Q2 
+        Cos[$CellContext`\[Alpha]]^2 + $CellContext`Q1 
+        Sin[$CellContext`\[Alpha]]^2))^2 + ($CellContext`B (-$CellContext`Q1 + \
+$CellContext`Q2) Cos[$CellContext`\[Alpha]] 
+      Sin[$CellContext`\[Alpha]] + $CellContext`A ($CellContext`Q1 
+        Cos[$CellContext`\[Alpha]]^2 + $CellContext`Q2 
+        Sin[$CellContext`\[Alpha]]^2))^2],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.91754719553638*^9},
+ CellLabel->
+  "During evaluation of \
+In[782]:=",ExpressionUUID->"30104d93-0520-41e5-96db-3899beb4c194"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Q.(A,B) with A substituted=\"\>", "\[InvisibleSpace]", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", 
+     TagBox[GridBox[{
+        {
+         FractionBox[
+          RowBox[{"B", " ", "Q1", " ", 
+           RowBox[{"(", 
+            RowBox[{"Q1", "-", "Q2"}], ")"}], " ", "Q2", " ", 
+           RowBox[{"Sin", "[", 
+            RowBox[{"2", " ", "\[Alpha]"}], "]"}]}], 
+          RowBox[{
+           SuperscriptBox["Q1", "2"], "+", 
+           SuperscriptBox["Q2", "2"], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              SuperscriptBox["Q1", "2"], "-", 
+              SuperscriptBox["Q2", "2"]}], ")"}], " ", 
+            RowBox[{"Cos", "[", 
+             RowBox[{"2", " ", "\[Alpha]"}], "]"}]}]}]]},
+        {
+         FractionBox[
+          RowBox[{"B", " ", "Q1", " ", "Q2", " ", 
+           RowBox[{"(", 
+            RowBox[{"Q1", "+", "Q2", "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"Q1", "-", "Q2"}], ")"}], " ", 
+              RowBox[{"Cos", "[", 
+               RowBox[{"2", " ", "\[Alpha]"}], "]"}]}]}], ")"}]}], 
+          RowBox[{
+           SuperscriptBox["Q1", "2"], "+", 
+           SuperscriptBox["Q2", "2"], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              SuperscriptBox["Q1", "2"], "-", 
+              SuperscriptBox["Q2", "2"]}], ")"}], " ", 
+            RowBox[{"Cos", "[", 
+             RowBox[{"2", " ", "\[Alpha]"}], "]"}]}]}]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.5599999999999999]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      Column], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]]}],
+  SequenceForm["Q.(A,B) with A substituted=", 
+   MatrixForm[{$CellContext`B $CellContext`Q1 ($CellContext`Q1 - \
+$CellContext`Q2) $CellContext`Q2 ($CellContext`Q1^2 + $CellContext`Q2^2 + \
+($CellContext`Q1^2 - $CellContext`Q2^2) Cos[2 $CellContext`\[Alpha]])^(-1) 
+     Sin[2 $CellContext`\[Alpha]], $CellContext`B $CellContext`Q1 \
+$CellContext`Q2 ($CellContext`Q1 + $CellContext`Q2 + ($CellContext`Q1 - \
+$CellContext`Q2) 
+       Cos[2 $CellContext`\[Alpha]])/($CellContext`Q1^2 + $CellContext`Q2^2 + \
+($CellContext`Q1^2 - $CellContext`Q2^2) Cos[2 $CellContext`\[Alpha]])}]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.917547195622699*^9},
+ CellLabel->
+  "During evaluation of \
+In[782]:=",ExpressionUUID->"b9365209-d062-496e-bdf2-2127a79d01d3"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"(Q.(A,B)\\!\\(\\*SuperscriptBox[\\()\\), \\(2\\)]\\)with A \
+substituted for Q and B=\"\>", "\[InvisibleSpace]", 
+   TagBox[
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["B", "2"], " ", 
+      SuperscriptBox["Q1", "2"], " ", 
+      SuperscriptBox["Q2", "2"]}], 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["Q1", "2"], " ", 
+       SuperscriptBox[
+        RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "+", 
+      RowBox[{
+       SuperscriptBox["Q2", "2"], " ", 
+       SuperscriptBox[
+        RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}]],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]]}],
+  SequenceForm[
+  "(Q.(A,B)\!\(\*SuperscriptBox[\()\), \(2\)]\)with A substituted for Q and \
+B=", 
+   MatrixForm[$CellContext`B^2 $CellContext`Q1^2 \
+$CellContext`Q2^2/($CellContext`Q1^2 
+     Cos[$CellContext`\[Alpha]]^2 + $CellContext`Q2^2 
+     Sin[$CellContext`\[Alpha]]^2)]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.9175471956369877`*^9},
+ CellLabel->
+  "During evaluation of \
+In[782]:=",ExpressionUUID->"03cab958-3485-4bf2-9ad2-0324875c41d2"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}]], "Input",
+ CellLabel->
+  "In[1186]:=",ExpressionUUID->"72e6edd1-fc03-4406-a903-0f8673ab1d94"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"(*", 
+    RowBox[{
+    "Section", " ", "that", " ", "deals", " ", "with", " ", "the", " ", 
+     "general", " ", "tesnor", " ", 
+     RowBox[{"form", ".", " ", "This"}], " ", "is", " ", "not", " ", 
+     RowBox[{"diagonal", " ", "."}]}], "*)"}], "Title"], 
+  StyleBox["\[IndentingNewLine]", "Section"], 
+  RowBox[{
+   RowBox[{"Q", ":=", 
+    RowBox[{
+     RowBox[{"Q11", "*", 
+      RowBox[{"Outer", "[", 
+       RowBox[{"Times", ",", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Cos", "[", "\[Alpha]", "]"}], "*", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "0"}], "}"}]}], "-", 
+          RowBox[{
+           RowBox[{"Sin", "[", "\[Alpha]", "]"}], "*", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "1"}], "}"}]}]}], ")"}], ",", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Cos", "[", "\[Alpha]", "]"}], "*", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "0"}], "}"}]}], "-", 
+          RowBox[{
+           RowBox[{"Sin", "[", "\[Alpha]", "]"}], "*", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "1"}], "}"}]}]}], ")"}]}], "]"}]}], "+", 
+     RowBox[{"Q12", "*", 
+      RowBox[{"Outer", "[", 
+       RowBox[{"Times", ",", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Cos", "[", "\[Alpha]", "]"}], "*", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "0"}], "}"}]}], "-", 
+          RowBox[{
+           RowBox[{"Sin", "[", "\[Alpha]", "]"}], "*", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "1"}], "}"}]}]}], ")"}], ",", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Sin", "[", "\[Alpha]", "]"}], "*", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "0"}], "}"}]}], "+", 
+          RowBox[{
+           RowBox[{"Cos", "[", "\[Alpha]", "]"}], "*", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "1"}], "}"}]}]}], ")"}]}], "]"}]}], "+", 
+     RowBox[{"Q12", "*", 
+      RowBox[{"Outer", "[", 
+       RowBox[{"Times", ",", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Sin", "[", "\[Alpha]", "]"}], "*", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "0"}], "}"}]}], "+", 
+          RowBox[{
+           RowBox[{"Cos", "[", "\[Alpha]", "]"}], "*", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "1"}], "}"}]}]}], ")"}], ",", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Cos", "[", "\[Alpha]", "]"}], "*", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "0"}], "}"}]}], "-", 
+          RowBox[{
+           RowBox[{"Sin", "[", "\[Alpha]", "]"}], "*", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "1"}], "}"}]}]}], ")"}]}], "]"}]}], "+", 
+     RowBox[{"Q22", "*", 
+      RowBox[{"Outer", "[", 
+       RowBox[{"Times", ",", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Sin", "[", "\[Alpha]", "]"}], "*", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "0"}], "}"}]}], "+", 
+          RowBox[{
+           RowBox[{"Cos", "[", "\[Alpha]", "]"}], "*", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "1"}], "}"}]}]}], ")"}], ",", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Sin", "[", "\[Alpha]", "]"}], "*", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "0"}], "}"}]}], "+", 
+          RowBox[{
+           RowBox[{"Cos", "[", "\[Alpha]", "]"}], "*", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "1"}], "}"}]}]}], ")"}]}], "]"}]}]}]}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"Print", "[", 
+    RowBox[{"\"\<Q=\>\"", ",", 
+     RowBox[{"Q", "//", "MatrixForm"}]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Print", "[", 
+    RowBox[{"\"\<\!\(\*SuperscriptBox[\(Q\), \(T\)]\).Q=\>\"", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"Transpose", "[", "Q", "]"}], ".", "Q"}], "//", "Simplify"}], 
+      "//", "MatrixForm"}]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Print", "[", 
+    RowBox[{"\"\<\!\(\*SuperscriptBox[\(Q\), \(T\)]\)Q.(A,B)=\>\"", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Q", ".", "Q", ".", 
+        RowBox[{"Transpose", "[", 
+         RowBox[{"{", 
+          RowBox[{"A", ",", "B"}], "}"}], "]"}]}], "//", "Simplify"}], "//", 
+      "MatrixForm"}]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Print", "[", 
+    RowBox[{
+    "\"\<\!\(\*SuperscriptBox[\(Q\), \(T\)]\)Q.(A,B) with A substituted=\>\"",
+      ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Q", ".", "Q", ".", 
+        RowBox[{"Transpose", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", 
+             RowBox[{"(", 
+              FractionBox[
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", 
+                   SuperscriptBox["Q1", "2"]}], "+", 
+                  SuperscriptBox["Q2", "2"]}], ")"}], " ", 
+                RowBox[{"Cos", "[", "\[Alpha]", "]"}], "*", 
+                RowBox[{"Sin", "[", "\[Alpha]", "]"}]}], 
+               RowBox[{
+                RowBox[{
+                 SuperscriptBox["Q1", "2"], " ", 
+                 SuperscriptBox[
+                  RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "+", 
+                RowBox[{
+                 SuperscriptBox["Q2", "2"], " ", 
+                 SuperscriptBox[
+                  RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}]], ")"}]}], 
+            "*", "B"}], ",", "B"}], "}"}], "]"}]}], "//", "Simplify"}], "//", 
+      "MatrixForm"}]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Print", "[", 
+    RowBox[{"\"\<Q.(A,B)=\>\"", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Q", ".", 
+        RowBox[{"Transpose", "[", 
+         RowBox[{"{", 
+          RowBox[{"A", ",", "B"}], "}"}], "]"}]}], "//", "Simplify"}], "//", 
+      "MatrixForm"}]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Print", "[", 
+    RowBox[{"\"\<(Q.(A,B)\!\(\*SuperscriptBox[\()\), \(2\)]\)=\>\"", ",", 
+     RowBox[{"Q", ".", 
+      RowBox[{"Transpose", "[", 
+       RowBox[{"{", 
+        RowBox[{"A", ",", "B"}], "}"}], "]"}], ".", 
+      RowBox[{"Transpose", "[", 
+       RowBox[{"Q", ".", 
+        RowBox[{"Transpose", "[", 
+         RowBox[{"{", 
+          RowBox[{"A", ",", "B"}], "}"}], "]"}]}], "]"}]}]}], "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"Print", "[", 
+    RowBox[{"\"\<Q.(A,B) with A substituted=\>\"", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"Q", ".", 
+         RowBox[{"Transpose", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", 
+              RowBox[{"(", 
+               FractionBox[
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"-", 
+                    SuperscriptBox["Q1", "2"]}], "+", 
+                   SuperscriptBox["Q2", "2"]}], ")"}], " ", 
+                 RowBox[{"Cos", "[", "\[Alpha]", "]"}], "*", 
+                 RowBox[{"Sin", "[", "\[Alpha]", "]"}]}], 
+                RowBox[{
+                 RowBox[{
+                  SuperscriptBox["Q1", "2"], " ", 
+                  SuperscriptBox[
+                   RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "+", 
+                 RowBox[{
+                  SuperscriptBox["Q2", "2"], " ", 
+                  SuperscriptBox[
+                   RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}]], ")"}]}], 
+             "*", "B"}], ",", "B"}], "}"}], "]"}]}], "//", "Expand"}], "//", 
+       "Simplify"}], "//", "MatrixForm"}]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Print", "[", 
+    RowBox[{
+    "\"\<(Q.(A,B)\!\(\*SuperscriptBox[\()\), \(2\)]\)with A substituted for Q \
+and B=\>\"", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Q", ".", 
+        RowBox[{"Transpose", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", 
+             RowBox[{"(", 
+              FractionBox[
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", 
+                   SuperscriptBox["Q1", "2"]}], "+", 
+                  SuperscriptBox["Q2", "2"]}], ")"}], " ", 
+                RowBox[{"Cos", "[", "\[Alpha]", "]"}], "*", 
+                RowBox[{"Sin", "[", "\[Alpha]", "]"}]}], 
+               RowBox[{
+                RowBox[{
+                 SuperscriptBox["Q1", "2"], " ", 
+                 SuperscriptBox[
+                  RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "+", 
+                RowBox[{
+                 SuperscriptBox["Q2", "2"], " ", 
+                 SuperscriptBox[
+                  RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}]], ")"}]}], 
+            "*", "B"}], ",", "B"}], "}"}], "]"}], ".", 
+        RowBox[{"Transpose", "[", 
+         RowBox[{"Q", ".", 
+          RowBox[{"Transpose", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", 
+               RowBox[{"(", 
+                FractionBox[
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"-", 
+                    SuperscriptBox["Q1", "2"]}], "+", 
+                    SuperscriptBox["Q2", "2"]}], ")"}], " ", 
+                  RowBox[{"Cos", "[", "\[Alpha]", "]"}], "*", 
+                  RowBox[{"Sin", "[", "\[Alpha]", "]"}]}], 
+                 RowBox[{
+                  RowBox[{
+                   SuperscriptBox["Q1", "2"], " ", 
+                   SuperscriptBox[
+                    RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "+", 
+                  RowBox[{
+                   SuperscriptBox["Q2", "2"], " ", 
+                   SuperscriptBox[
+                    RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}]], ")"}]}],
+               "*", "B"}], ",", "B"}], "}"}], "]"}]}], "]"}]}], "//", 
+       "Simplify"}], "//", "MatrixForm"}]}], "]"}], 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.908050134723392*^9, 3.908050142381034*^9}, {
+  3.908050230377146*^9, 3.9080502419611998`*^9}, {3.9080514667128773`*^9, 
+  3.908051474597129*^9}, {3.908051542614031*^9, 3.908051542903172*^9}, {
+  3.9080515800049143`*^9, 3.9080516084793177`*^9}, {3.90805172228855*^9, 
+  3.9080517240031633`*^9}, {3.908052667453478*^9, 3.908052672879492*^9}},
+ CellLabel->
+  "In[791]:=",ExpressionUUID->"7f23a426-5a4b-43b4-beea-62bff93ceea6"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Q=\"\>", "\[InvisibleSpace]", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {
+        RowBox[{
+         RowBox[{"Q11", " ", 
+          SuperscriptBox[
+           RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "+", 
+         RowBox[{"2", " ", "Q12", " ", 
+          RowBox[{"Cos", "[", "\[Alpha]", "]"}], " ", 
+          RowBox[{"Sin", "[", "\[Alpha]", "]"}]}], "+", 
+         RowBox[{"Q22", " ", 
+          SuperscriptBox[
+           RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}], 
+        RowBox[{
+         RowBox[{"Q12", " ", 
+          SuperscriptBox[
+           RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "-", 
+         RowBox[{"Q11", " ", 
+          RowBox[{"Cos", "[", "\[Alpha]", "]"}], " ", 
+          RowBox[{"Sin", "[", "\[Alpha]", "]"}]}], "+", 
+         RowBox[{"Q22", " ", 
+          RowBox[{"Cos", "[", "\[Alpha]", "]"}], " ", 
+          RowBox[{"Sin", "[", "\[Alpha]", "]"}]}], "-", 
+         RowBox[{"Q12", " ", 
+          SuperscriptBox[
+           RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}]},
+       {
+        RowBox[{
+         RowBox[{"Q12", " ", 
+          SuperscriptBox[
+           RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "-", 
+         RowBox[{"Q11", " ", 
+          RowBox[{"Cos", "[", "\[Alpha]", "]"}], " ", 
+          RowBox[{"Sin", "[", "\[Alpha]", "]"}]}], "+", 
+         RowBox[{"Q22", " ", 
+          RowBox[{"Cos", "[", "\[Alpha]", "]"}], " ", 
+          RowBox[{"Sin", "[", "\[Alpha]", "]"}]}], "-", 
+         RowBox[{"Q12", " ", 
+          SuperscriptBox[
+           RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}], 
+        RowBox[{
+         RowBox[{"Q22", " ", 
+          SuperscriptBox[
+           RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "-", 
+         RowBox[{"2", " ", "Q12", " ", 
+          RowBox[{"Cos", "[", "\[Alpha]", "]"}], " ", 
+          RowBox[{"Sin", "[", "\[Alpha]", "]"}]}], "+", 
+         RowBox[{"Q11", " ", 
+          SuperscriptBox[
+           RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}]}
+      },
+      GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]]}],
+  SequenceForm["Q=", 
+   MatrixForm[{{$CellContext`Q11 Cos[$CellContext`\[Alpha]]^2 + 
+      2 $CellContext`Q12 Cos[$CellContext`\[Alpha]] 
+       Sin[$CellContext`\[Alpha]] + $CellContext`Q22 
+       Sin[$CellContext`\[Alpha]]^2, $CellContext`Q12 
+       Cos[$CellContext`\[Alpha]]^2 - $CellContext`Q11 
+      Cos[$CellContext`\[Alpha]] 
+      Sin[$CellContext`\[Alpha]] + $CellContext`Q22 
+       Cos[$CellContext`\[Alpha]] 
+       Sin[$CellContext`\[Alpha]] - $CellContext`Q12 
+      Sin[$CellContext`\[Alpha]]^2}, {$CellContext`Q12 
+       Cos[$CellContext`\[Alpha]]^2 - $CellContext`Q11 
+      Cos[$CellContext`\[Alpha]] 
+      Sin[$CellContext`\[Alpha]] + $CellContext`Q22 
+       Cos[$CellContext`\[Alpha]] 
+       Sin[$CellContext`\[Alpha]] - $CellContext`Q12 
+      Sin[$CellContext`\[Alpha]]^2, $CellContext`Q22 
+       Cos[$CellContext`\[Alpha]]^2 - 2 $CellContext`Q12 
+      Cos[$CellContext`\[Alpha]] 
+      Sin[$CellContext`\[Alpha]] + $CellContext`Q11 
+       Sin[$CellContext`\[Alpha]]^2}}]],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.908051589909896*^9, 3.908051609358111*^9}, 
+   3.9080517245410757`*^9, 3.908052689405985*^9, 3.917547391454661*^9},
+ CellLabel->
+  "During evaluation of \
+In[791]:=",ExpressionUUID->"bee027be-d72b-4efd-9fe5-eff4d5137884"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\!\\(\\*SuperscriptBox[\\(Q\\), \\(T\\)]\\).Q=\"\>", 
+   "\[InvisibleSpace]", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {
+        RowBox[{
+         FractionBox["1", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           SuperscriptBox["Q11", "2"], "+", 
+           RowBox[{"2", " ", 
+            SuperscriptBox["Q12", "2"]}], "+", 
+           SuperscriptBox["Q22", "2"], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              SuperscriptBox["Q11", "2"], "-", 
+              SuperscriptBox["Q22", "2"]}], ")"}], " ", 
+            RowBox[{"Cos", "[", 
+             RowBox[{"2", " ", "\[Alpha]"}], "]"}]}], "+", 
+           RowBox[{"2", " ", "Q12", " ", 
+            RowBox[{"(", 
+             RowBox[{"Q11", "+", "Q22"}], ")"}], " ", 
+            RowBox[{"Sin", "[", 
+             RowBox[{"2", " ", "\[Alpha]"}], "]"}]}]}], ")"}]}], 
+        RowBox[{
+         RowBox[{"-", 
+          FractionBox["1", "2"]}], " ", 
+         RowBox[{"(", 
+          RowBox[{"Q11", "+", "Q22"}], ")"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "2"}], " ", "Q12", " ", 
+            RowBox[{"Cos", "[", 
+             RowBox[{"2", " ", "\[Alpha]"}], "]"}]}], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"Q11", "-", "Q22"}], ")"}], " ", 
+            RowBox[{"Sin", "[", 
+             RowBox[{"2", " ", "\[Alpha]"}], "]"}]}]}], ")"}]}]},
+       {
+        RowBox[{
+         RowBox[{"-", 
+          FractionBox["1", "2"]}], " ", 
+         RowBox[{"(", 
+          RowBox[{"Q11", "+", "Q22"}], ")"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "2"}], " ", "Q12", " ", 
+            RowBox[{"Cos", "[", 
+             RowBox[{"2", " ", "\[Alpha]"}], "]"}]}], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"Q11", "-", "Q22"}], ")"}], " ", 
+            RowBox[{"Sin", "[", 
+             RowBox[{"2", " ", "\[Alpha]"}], "]"}]}]}], ")"}]}], 
+        RowBox[{
+         FractionBox["1", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           SuperscriptBox["Q11", "2"], "+", 
+           RowBox[{"2", " ", 
+            SuperscriptBox["Q12", "2"]}], "+", 
+           SuperscriptBox["Q22", "2"], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", 
+               SuperscriptBox["Q11", "2"]}], "+", 
+              SuperscriptBox["Q22", "2"]}], ")"}], " ", 
+            RowBox[{"Cos", "[", 
+             RowBox[{"2", " ", "\[Alpha]"}], "]"}]}], "-", 
+           RowBox[{"2", " ", "Q12", " ", 
+            RowBox[{"(", 
+             RowBox[{"Q11", "+", "Q22"}], ")"}], " ", 
+            RowBox[{"Sin", "[", 
+             RowBox[{"2", " ", "\[Alpha]"}], "]"}]}]}], ")"}]}]}
+      },
+      GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]]}],
+  SequenceForm["\!\(\*SuperscriptBox[\(Q\), \(T\)]\).Q=", 
+   MatrixForm[{{
+     Rational[1, 2] ($CellContext`Q11^2 + 
+       2 $CellContext`Q12^2 + $CellContext`Q22^2 + ($CellContext`Q11^2 - \
+$CellContext`Q22^2) Cos[2 $CellContext`\[Alpha]] + 
+       2 $CellContext`Q12 ($CellContext`Q11 + $CellContext`Q22) 
+        Sin[2 $CellContext`\[Alpha]]), 
+      Rational[-1, 
+        2] ($CellContext`Q11 + $CellContext`Q22) ((-2) $CellContext`Q12 
+        Cos[2 $CellContext`\[Alpha]] + ($CellContext`Q11 - $CellContext`Q22) 
+        Sin[2 $CellContext`\[Alpha]])}, {
+     Rational[-1, 
+        2] ($CellContext`Q11 + $CellContext`Q22) ((-2) $CellContext`Q12 
+        Cos[2 $CellContext`\[Alpha]] + ($CellContext`Q11 - $CellContext`Q22) 
+        Sin[2 $CellContext`\[Alpha]]), 
+      Rational[1, 2] ($CellContext`Q11^2 + 
+       2 $CellContext`Q12^2 + $CellContext`Q22^2 + (-$CellContext`Q11^2 + \
+$CellContext`Q22^2) Cos[2 $CellContext`\[Alpha]] - 
+       2 $CellContext`Q12 ($CellContext`Q11 + $CellContext`Q22) 
+       Sin[2 $CellContext`\[Alpha]])}}]],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.908051589909896*^9, 3.908051609358111*^9}, 
+   3.9080517245410757`*^9, 3.908052689405985*^9, 3.917547391663722*^9},
+ CellLabel->
+  "During evaluation of \
+In[791]:=",ExpressionUUID->"98b8b2d2-8c84-4d7f-9e50-4c4546099eb6"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\!\\(\\*SuperscriptBox[\\(Q\\), \\(T\\)]\\)Q.(A,B)=\"\>", 
+   "\[InvisibleSpace]", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", 
+     TagBox[GridBox[{
+        {
+         RowBox[{
+          FractionBox["1", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"A", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               SuperscriptBox["Q11", "2"], "+", 
+               RowBox[{"2", " ", 
+                SuperscriptBox["Q12", "2"]}], "+", 
+               SuperscriptBox["Q22", "2"]}], ")"}]}], "+", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"2", " ", "B", " ", "Q12"}], "+", 
+               RowBox[{"A", " ", 
+                RowBox[{"(", 
+                 RowBox[{"Q11", "-", "Q22"}], ")"}]}]}], ")"}], " ", 
+             RowBox[{"(", 
+              RowBox[{"Q11", "+", "Q22"}], ")"}], " ", 
+             RowBox[{"Cos", "[", 
+              RowBox[{"2", " ", "\[Alpha]"}], "]"}]}], "+", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"Q11", "+", "Q22"}], ")"}], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"2", " ", "A", " ", "Q12"}], "+", 
+               RowBox[{"B", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "Q11"}], "+", "Q22"}], ")"}]}]}], ")"}], " ", 
+             RowBox[{"Sin", "[", 
+              RowBox[{"2", " ", "\[Alpha]"}], "]"}]}]}], ")"}]}]},
+        {
+         RowBox[{
+          FractionBox["1", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"B", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               SuperscriptBox["Q11", "2"], "+", 
+               RowBox[{"2", " ", 
+                SuperscriptBox["Q12", "2"]}], "+", 
+               SuperscriptBox["Q22", "2"]}], ")"}]}], "+", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"Q11", "+", "Q22"}], ")"}], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"2", " ", "A", " ", "Q12"}], "+", 
+               RowBox[{"B", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "Q11"}], "+", "Q22"}], ")"}]}]}], ")"}], " ", 
+             RowBox[{"Cos", "[", 
+              RowBox[{"2", " ", "\[Alpha]"}], "]"}]}], "-", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"Q11", "+", "Q22"}], ")"}], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"A", " ", "Q11"}], "+", 
+               RowBox[{"2", " ", "B", " ", "Q12"}], "-", 
+               RowBox[{"A", " ", "Q22"}]}], ")"}], " ", 
+             RowBox[{"Sin", "[", 
+              RowBox[{"2", " ", "\[Alpha]"}], "]"}]}]}], ")"}]}]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.5599999999999999]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      Column], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]]}],
+  SequenceForm["\!\(\*SuperscriptBox[\(Q\), \(T\)]\)Q.(A,B)=", 
+   MatrixForm[{
+    Rational[1, 
+       2] ($CellContext`A ($CellContext`Q11^2 + 
+        2 $CellContext`Q12^2 + $CellContext`Q22^2) + (
+        2 $CellContext`B $CellContext`Q12 + $CellContext`A ($CellContext`Q11 - \
+$CellContext`Q22)) ($CellContext`Q11 + $CellContext`Q22) 
+       Cos[2 $CellContext`\[Alpha]] + ($CellContext`Q11 + $CellContext`Q22) (
+        2 $CellContext`A $CellContext`Q12 + $CellContext`B (-$CellContext`Q11 + \
+$CellContext`Q22)) Sin[2 $CellContext`\[Alpha]]), 
+     Rational[1, 
+       2] ($CellContext`B ($CellContext`Q11^2 + 
+        2 $CellContext`Q12^2 + $CellContext`Q22^2) + ($CellContext`Q11 + \
+$CellContext`Q22) (
+        2 $CellContext`A $CellContext`Q12 + $CellContext`B (-$CellContext`Q11 + \
+$CellContext`Q22)) 
+       Cos[2 $CellContext`\[Alpha]] - ($CellContext`Q11 + $CellContext`Q22) \
+($CellContext`A $CellContext`Q11 + 
+       2 $CellContext`B $CellContext`Q12 - $CellContext`A $CellContext`Q22) 
+      Sin[2 $CellContext`\[Alpha]])}]],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.908051589909896*^9, 3.908051609358111*^9}, 
+   3.9080517245410757`*^9, 3.908052689405985*^9, 3.917547391890582*^9},
+ CellLabel->
+  "During evaluation of \
+In[791]:=",ExpressionUUID->"4d46c790-6b7d-4101-9d25-784d0cec94e5"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\!\\(\\*SuperscriptBox[\\(Q\\), \\(T\\)]\\)Q.(A,B) with A \
+substituted=\"\>", "\[InvisibleSpace]", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", 
+     TagBox[GridBox[{
+        {
+         FractionBox[
+          RowBox[{"B", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"Q12", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                SuperscriptBox["Q1", "2"], "-", 
+                SuperscriptBox["Q2", "2"]}], ")"}], " ", 
+              RowBox[{"(", 
+               RowBox[{"Q11", "+", "Q22"}], ")"}]}], "+", 
+             RowBox[{"Q12", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                SuperscriptBox["Q1", "2"], "+", 
+                SuperscriptBox["Q2", "2"]}], ")"}], " ", 
+              RowBox[{"(", 
+               RowBox[{"Q11", "+", "Q22"}], ")"}], " ", 
+              RowBox[{"Cos", "[", 
+               RowBox[{"2", " ", "\[Alpha]"}], "]"}]}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{
+                    SuperscriptBox["Q11", "2"], "+", 
+                    SuperscriptBox["Q12", "2"]}], ")"}], " ", 
+                   SuperscriptBox["Q2", "2"]}], ")"}]}], "+", 
+                RowBox[{
+                 SuperscriptBox["Q1", "2"], " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   SuperscriptBox["Q12", "2"], "+", 
+                   SuperscriptBox["Q22", "2"]}], ")"}]}]}], ")"}], " ", 
+              RowBox[{"Sin", "[", 
+               RowBox[{"2", " ", "\[Alpha]"}], "]"}]}]}], ")"}]}], 
+          RowBox[{"2", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              SuperscriptBox["Q1", "2"], " ", 
+              SuperscriptBox[
+               RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "+", 
+             RowBox[{
+              SuperscriptBox["Q2", "2"], " ", 
+              SuperscriptBox[
+               RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}], ")"}]}]]},
+        {
+         FractionBox[
+          RowBox[{"B", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              SuperscriptBox["Q1", "2"], " ", 
+              SuperscriptBox["Q12", "2"]}], "+", 
+             RowBox[{
+              SuperscriptBox["Q11", "2"], " ", 
+              SuperscriptBox["Q2", "2"]}], "+", 
+             RowBox[{
+              SuperscriptBox["Q12", "2"], " ", 
+              SuperscriptBox["Q2", "2"]}], "+", 
+             RowBox[{
+              SuperscriptBox["Q1", "2"], " ", 
+              SuperscriptBox["Q22", "2"]}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{
+                    SuperscriptBox["Q11", "2"], "+", 
+                    SuperscriptBox["Q12", "2"]}], ")"}], " ", 
+                   SuperscriptBox["Q2", "2"]}], ")"}]}], "+", 
+                RowBox[{
+                 SuperscriptBox["Q1", "2"], " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   SuperscriptBox["Q12", "2"], "+", 
+                   SuperscriptBox["Q22", "2"]}], ")"}]}]}], ")"}], " ", 
+              RowBox[{"Cos", "[", 
+               RowBox[{"2", " ", "\[Alpha]"}], "]"}]}], "-", 
+             RowBox[{"Q12", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                SuperscriptBox["Q1", "2"], "+", 
+                SuperscriptBox["Q2", "2"]}], ")"}], " ", 
+              RowBox[{"(", 
+               RowBox[{"Q11", "+", "Q22"}], ")"}], " ", 
+              RowBox[{"Sin", "[", 
+               RowBox[{"2", " ", "\[Alpha]"}], "]"}]}]}], ")"}]}], 
+          RowBox[{"2", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              SuperscriptBox["Q1", "2"], " ", 
+              SuperscriptBox[
+               RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "+", 
+             RowBox[{
+              SuperscriptBox["Q2", "2"], " ", 
+              SuperscriptBox[
+               RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}], ")"}]}]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.5599999999999999]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      Column], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]]}],
+  SequenceForm[
+  "\!\(\*SuperscriptBox[\(Q\), \(T\)]\)Q.(A,B) with A substituted=", 
+   MatrixForm[{
+    Rational[1, 
+       2] $CellContext`B ($CellContext`Q1^2 
+        Cos[$CellContext`\[Alpha]]^2 + $CellContext`Q2^2 
+        Sin[$CellContext`\[Alpha]]^2)^(-1) ($CellContext`Q12 \
+($CellContext`Q1^2 - $CellContext`Q2^2) ($CellContext`Q11 + $CellContext`Q22) + \
+$CellContext`Q12 ($CellContext`Q1^2 + $CellContext`Q2^2) ($CellContext`Q11 + \
+$CellContext`Q22) 
+       Cos[2 $CellContext`\[Alpha]] + (-($CellContext`Q11^2 + \
+$CellContext`Q12^2) $CellContext`Q2^2 + $CellContext`Q1^2 ($CellContext`Q12^2 + \
+$CellContext`Q22^2)) Sin[2 $CellContext`\[Alpha]]), 
+     Rational[1, 
+       2] $CellContext`B ($CellContext`Q1^2 
+        Cos[$CellContext`\[Alpha]]^2 + $CellContext`Q2^2 
+        Sin[$CellContext`\[Alpha]]^2)^(-1) ($CellContext`Q1^2 \
+$CellContext`Q12^2 + $CellContext`Q11^2 $CellContext`Q2^2 + \
+$CellContext`Q12^2 $CellContext`Q2^2 + $CellContext`Q1^2 $CellContext`Q22^2 + \
+(-($CellContext`Q11^2 + $CellContext`Q12^2) $CellContext`Q2^2 + \
+$CellContext`Q1^2 ($CellContext`Q12^2 + $CellContext`Q22^2)) 
+       Cos[2 $CellContext`\[Alpha]] - $CellContext`Q12 ($CellContext`Q1^2 + \
+$CellContext`Q2^2) ($CellContext`Q11 + $CellContext`Q22) 
+      Sin[2 $CellContext`\[Alpha]])}]],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.908051589909896*^9, 3.908051609358111*^9}, 
+   3.9080517245410757`*^9, 3.908052689405985*^9, 3.917547392267912*^9},
+ CellLabel->
+  "During evaluation of \
+In[791]:=",ExpressionUUID->"4b23b37b-0256-4511-9f87-6c58919ccd17"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Q.(A,B)=\"\>", "\[InvisibleSpace]", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", 
+     TagBox[GridBox[{
+        {
+         RowBox[{
+          RowBox[{"B", " ", "Q12", " ", 
+           RowBox[{"Cos", "[", 
+            RowBox[{"2", " ", "\[Alpha]"}], "]"}]}], "+", 
+          RowBox[{"B", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "Q11"}], "+", "Q22"}], ")"}], " ", 
+           RowBox[{"Cos", "[", "\[Alpha]", "]"}], " ", 
+           RowBox[{"Sin", "[", "\[Alpha]", "]"}]}], "+", 
+          RowBox[{"A", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"Q11", " ", 
+              SuperscriptBox[
+               RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "+", 
+             RowBox[{"Q22", " ", 
+              SuperscriptBox[
+               RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}], "+", 
+             RowBox[{"Q12", " ", 
+              RowBox[{"Sin", "[", 
+               RowBox[{"2", " ", "\[Alpha]"}], "]"}]}]}], ")"}]}]}]},
+        {
+         RowBox[{
+          RowBox[{"B", " ", "Q22", " ", 
+           SuperscriptBox[
+            RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "+", 
+          RowBox[{"A", " ", "Q12", " ", 
+           RowBox[{"Cos", "[", 
+            RowBox[{"2", " ", "\[Alpha]"}], "]"}]}], "-", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"2", " ", "B", " ", "Q12"}], "+", 
+             RowBox[{"A", " ", 
+              RowBox[{"(", 
+               RowBox[{"Q11", "-", "Q22"}], ")"}]}]}], ")"}], " ", 
+           RowBox[{"Cos", "[", "\[Alpha]", "]"}], " ", 
+           RowBox[{"Sin", "[", "\[Alpha]", "]"}]}], "+", 
+          RowBox[{"B", " ", "Q11", " ", 
+           SuperscriptBox[
+            RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.5599999999999999]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      Column], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]]}],
+  SequenceForm["Q.(A,B)=", 
+   MatrixForm[{$CellContext`B $CellContext`Q12 
+      Cos[2 $CellContext`\[Alpha]] + $CellContext`B (-$CellContext`Q11 + \
+$CellContext`Q22) Cos[$CellContext`\[Alpha]] 
+      Sin[$CellContext`\[Alpha]] + $CellContext`A ($CellContext`Q11 
+        Cos[$CellContext`\[Alpha]]^2 + $CellContext`Q22 
+        Sin[$CellContext`\[Alpha]]^2 + $CellContext`Q12 
+        Sin[2 $CellContext`\[Alpha]]), $CellContext`B $CellContext`Q22 
+      Cos[$CellContext`\[Alpha]]^2 + $CellContext`A $CellContext`Q12 
+      Cos[2 $CellContext`\[Alpha]] - (
+      2 $CellContext`B $CellContext`Q12 + $CellContext`A ($CellContext`Q11 - \
+$CellContext`Q22)) Cos[$CellContext`\[Alpha]] 
+     Sin[$CellContext`\[Alpha]] + $CellContext`B $CellContext`Q11 
+      Sin[$CellContext`\[Alpha]]^2}]],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.908051589909896*^9, 3.908051609358111*^9}, 
+   3.9080517245410757`*^9, 3.908052689405985*^9, 3.917547392527255*^9},
+ CellLabel->
+  "During evaluation of \
+In[791]:=",ExpressionUUID->"e459f544-747d-4384-ab1f-79f8a64471c1"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"(Q.(A,B)\\!\\(\\*SuperscriptBox[\\()\\), \\(2\\)]\\)=\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"B", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Q22", " ", 
+           SuperscriptBox[
+            RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "-", 
+          RowBox[{"2", " ", "Q12", " ", 
+           RowBox[{"Cos", "[", "\[Alpha]", "]"}], " ", 
+           RowBox[{"Sin", "[", "\[Alpha]", "]"}]}], "+", 
+          RowBox[{"Q11", " ", 
+           SuperscriptBox[
+            RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}], ")"}]}], "+", 
+       RowBox[{"A", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Q12", " ", 
+           SuperscriptBox[
+            RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "-", 
+          RowBox[{"Q11", " ", 
+           RowBox[{"Cos", "[", "\[Alpha]", "]"}], " ", 
+           RowBox[{"Sin", "[", "\[Alpha]", "]"}]}], "+", 
+          RowBox[{"Q22", " ", 
+           RowBox[{"Cos", "[", "\[Alpha]", "]"}], " ", 
+           RowBox[{"Sin", "[", "\[Alpha]", "]"}]}], "-", 
+          RowBox[{"Q12", " ", 
+           SuperscriptBox[
+            RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}], ")"}]}]}], ")"}],
+      "2"], "+", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"B", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Q12", " ", 
+           SuperscriptBox[
+            RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "-", 
+          RowBox[{"Q11", " ", 
+           RowBox[{"Cos", "[", "\[Alpha]", "]"}], " ", 
+           RowBox[{"Sin", "[", "\[Alpha]", "]"}]}], "+", 
+          RowBox[{"Q22", " ", 
+           RowBox[{"Cos", "[", "\[Alpha]", "]"}], " ", 
+           RowBox[{"Sin", "[", "\[Alpha]", "]"}]}], "-", 
+          RowBox[{"Q12", " ", 
+           SuperscriptBox[
+            RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}], ")"}]}], "+", 
+       RowBox[{"A", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Q11", " ", 
+           SuperscriptBox[
+            RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "+", 
+          RowBox[{"2", " ", "Q12", " ", 
+           RowBox[{"Cos", "[", "\[Alpha]", "]"}], " ", 
+           RowBox[{"Sin", "[", "\[Alpha]", "]"}]}], "+", 
+          RowBox[{"Q22", " ", 
+           SuperscriptBox[
+            RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}], ")"}]}]}], ")"}],
+      "2"]}]}],
+  SequenceForm[
+  "(Q.(A,B)\!\(\*SuperscriptBox[\()\), \(2\)]\)=", ($CellContext`B \
+($CellContext`Q22 Cos[$CellContext`\[Alpha]]^2 - 2 $CellContext`Q12 
+       Cos[$CellContext`\[Alpha]] 
+       Sin[$CellContext`\[Alpha]] + $CellContext`Q11 
+        Sin[$CellContext`\[Alpha]]^2) + $CellContext`A ($CellContext`Q12 
+        Cos[$CellContext`\[Alpha]]^2 - $CellContext`Q11 
+       Cos[$CellContext`\[Alpha]] 
+       Sin[$CellContext`\[Alpha]] + $CellContext`Q22 
+        Cos[$CellContext`\[Alpha]] 
+        Sin[$CellContext`\[Alpha]] - $CellContext`Q12 
+       Sin[$CellContext`\[Alpha]]^2))^2 + ($CellContext`B ($CellContext`Q12 
+        Cos[$CellContext`\[Alpha]]^2 - $CellContext`Q11 
+       Cos[$CellContext`\[Alpha]] 
+       Sin[$CellContext`\[Alpha]] + $CellContext`Q22 
+        Cos[$CellContext`\[Alpha]] 
+        Sin[$CellContext`\[Alpha]] - $CellContext`Q12 
+       Sin[$CellContext`\[Alpha]]^2) + $CellContext`A ($CellContext`Q11 
+        Cos[$CellContext`\[Alpha]]^2 + 
+       2 $CellContext`Q12 Cos[$CellContext`\[Alpha]] 
+        Sin[$CellContext`\[Alpha]] + $CellContext`Q22 
+        Sin[$CellContext`\[Alpha]]^2))^2],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.908051589909896*^9, 3.908051609358111*^9}, 
+   3.9080517245410757`*^9, 3.908052689405985*^9, 3.917547392530753*^9},
+ CellLabel->
+  "During evaluation of \
+In[791]:=",ExpressionUUID->"5bf755fb-3afa-4354-86b1-294127caded7"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Q.(A,B) with A substituted=\"\>", "\[InvisibleSpace]", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", 
+     TagBox[GridBox[{
+        {
+         FractionBox[
+          RowBox[{"B", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"Q12", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                SuperscriptBox["Q1", "2"], "-", 
+                SuperscriptBox["Q2", "2"]}], ")"}]}], "+", 
+             RowBox[{"Q12", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                SuperscriptBox["Q1", "2"], "+", 
+                SuperscriptBox["Q2", "2"]}], ")"}], " ", 
+              RowBox[{"Cos", "[", 
+               RowBox[{"2", " ", "\[Alpha]"}], "]"}]}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "Q11"}], " ", 
+                 SuperscriptBox["Q2", "2"]}], "+", 
+                RowBox[{
+                 SuperscriptBox["Q1", "2"], " ", "Q22"}]}], ")"}], " ", 
+              RowBox[{"Sin", "[", 
+               RowBox[{"2", " ", "\[Alpha]"}], "]"}]}]}], ")"}]}], 
+          RowBox[{"2", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              SuperscriptBox["Q1", "2"], " ", 
+              SuperscriptBox[
+               RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "+", 
+             RowBox[{
+              SuperscriptBox["Q2", "2"], " ", 
+              SuperscriptBox[
+               RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}], ")"}]}]]},
+        {
+         FractionBox[
+          RowBox[{"B", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"Q11", " ", 
+              SuperscriptBox["Q2", "2"]}], "+", 
+             RowBox[{
+              SuperscriptBox["Q1", "2"], " ", "Q22"}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "Q11"}], " ", 
+                 SuperscriptBox["Q2", "2"]}], "+", 
+                RowBox[{
+                 SuperscriptBox["Q1", "2"], " ", "Q22"}]}], ")"}], " ", 
+              RowBox[{"Cos", "[", 
+               RowBox[{"2", " ", "\[Alpha]"}], "]"}]}], "-", 
+             RowBox[{"Q12", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                SuperscriptBox["Q1", "2"], "+", 
+                SuperscriptBox["Q2", "2"]}], ")"}], " ", 
+              RowBox[{"Sin", "[", 
+               RowBox[{"2", " ", "\[Alpha]"}], "]"}]}]}], ")"}]}], 
+          RowBox[{"2", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              SuperscriptBox["Q1", "2"], " ", 
+              SuperscriptBox[
+               RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "+", 
+             RowBox[{
+              SuperscriptBox["Q2", "2"], " ", 
+              SuperscriptBox[
+               RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}], ")"}]}]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.5599999999999999]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      Column], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]]}],
+  SequenceForm["Q.(A,B) with A substituted=", 
+   MatrixForm[{
+    Rational[1, 
+       2] $CellContext`B ($CellContext`Q1^2 
+        Cos[$CellContext`\[Alpha]]^2 + $CellContext`Q2^2 
+        Sin[$CellContext`\[Alpha]]^2)^(-1) ($CellContext`Q12 \
+($CellContext`Q1^2 - $CellContext`Q2^2) + $CellContext`Q12 ($CellContext`Q1^2 + \
+$CellContext`Q2^2) 
+       Cos[2 $CellContext`\[Alpha]] + (-$CellContext`Q11 $CellContext`Q2^2 + \
+$CellContext`Q1^2 $CellContext`Q22) Sin[2 $CellContext`\[Alpha]]), 
+     Rational[1, 
+       2] $CellContext`B ($CellContext`Q1^2 
+        Cos[$CellContext`\[Alpha]]^2 + $CellContext`Q2^2 
+        Sin[$CellContext`\[Alpha]]^2)^(-1) ($CellContext`Q11 \
+$CellContext`Q2^2 + $CellContext`Q1^2 $CellContext`Q22 + (-$CellContext`Q11 \
+$CellContext`Q2^2 + $CellContext`Q1^2 $CellContext`Q22) 
+       Cos[2 $CellContext`\[Alpha]] - $CellContext`Q12 ($CellContext`Q1^2 + \
+$CellContext`Q2^2) Sin[2 $CellContext`\[Alpha]])}]],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.908051589909896*^9, 3.908051609358111*^9}, 
+   3.9080517245410757`*^9, 3.908052689405985*^9, 3.917547392732477*^9},
+ CellLabel->
+  "During evaluation of \
+In[791]:=",ExpressionUUID->"f7225b13-7630-47ad-af37-ea026db4844f"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"(Q.(A,B)\\!\\(\\*SuperscriptBox[\\()\\), \\(2\\)]\\)with A \
+substituted for Q and B=\"\>", "\[InvisibleSpace]", 
+   TagBox[
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["B", "2"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         SuperscriptBox["Q1", "4"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           SuperscriptBox["Q12", "2"], "+", 
+           SuperscriptBox["Q22", "2"]}], ")"}], " ", 
+         SuperscriptBox[
+          RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "+", 
+        RowBox[{
+         SuperscriptBox["Q2", "2"], " ", 
+         RowBox[{"Sin", "[", "\[Alpha]", "]"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "2"}], " ", 
+            SuperscriptBox["Q1", "2"], " ", "Q12", " ", 
+            RowBox[{"(", 
+             RowBox[{"Q11", "+", "Q22"}], ")"}], " ", 
+            RowBox[{"Cos", "[", "\[Alpha]", "]"}]}], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              SuperscriptBox["Q11", "2"], "+", 
+              SuperscriptBox["Q12", "2"]}], ")"}], " ", 
+            SuperscriptBox["Q2", "2"], " ", 
+            RowBox[{"Sin", "[", "\[Alpha]", "]"}]}]}], ")"}]}]}], ")"}]}], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         SuperscriptBox["Q1", "2"], " ", 
+         SuperscriptBox[
+          RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}], "+", 
+        RowBox[{
+         SuperscriptBox["Q2", "2"], " ", 
+         SuperscriptBox[
+          RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]}]}], ")"}], "2"]],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]]}],
+  SequenceForm[
+  "(Q.(A,B)\!\(\*SuperscriptBox[\()\), \(2\)]\)with A substituted for Q and \
+B=", 
+   MatrixForm[$CellContext`B^2 ($CellContext`Q1^2 
+       Cos[$CellContext`\[Alpha]]^2 + $CellContext`Q2^2 
+       Sin[$CellContext`\[Alpha]]^2)^(-2) ($CellContext`Q1^4 \
+($CellContext`Q12^2 + $CellContext`Q22^2) 
+      Cos[$CellContext`\[Alpha]]^2 + $CellContext`Q2^2 
+      Sin[$CellContext`\[Alpha]] ((-2) $CellContext`Q1^2 $CellContext`Q12 \
+($CellContext`Q11 + $CellContext`Q22) 
+        Cos[$CellContext`\[Alpha]] + ($CellContext`Q11^2 + \
+$CellContext`Q12^2) $CellContext`Q2^2 Sin[$CellContext`\[Alpha]]))]],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.908051589909896*^9, 3.908051609358111*^9}, 
+   3.9080517245410757`*^9, 3.908052689405985*^9, 3.917547392955962*^9},
+ CellLabel->
+  "During evaluation of \
+In[791]:=",ExpressionUUID->"63ffd4bf-4b6f-4034-a1f4-4da446d1f607"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1680, 917},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"13.2 for Mac OS X ARM (64-bit) (November 18, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"103e0b2f-c79d-4d56-ade0-4e4f9695b9f8"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 720, 14, 140, "Input",ExpressionUUID->"3a1346d9-983f-4eb6-8df8-7220bb7728d3"],
+Cell[CellGroupData[{
+Cell[1303, 38, 7859, 210, 714, "Input",ExpressionUUID->"0bc2eed2-2d2a-4188-80bf-6521c53bba76"],
+Cell[CellGroupData[{
+Cell[9187, 252, 2149, 58, 62, "Print",ExpressionUUID->"825bc17f-d2e3-4b8b-8610-049a4924256b"],
+Cell[11339, 312, 2431, 66, 70, "Print",ExpressionUUID->"072d3346-58ba-41b6-892d-193ebd4eb134"],
+Cell[13773, 380, 2706, 67, 70, "Print",ExpressionUUID->"7800c2b6-bf3c-4bf6-a8b9-3f752c9ccc9a"],
+Cell[16482, 449, 1604, 44, 78, "Print",ExpressionUUID->"fd98a258-a94d-4538-baeb-95f6ff621831"],
+Cell[18089, 495, 2552, 66, 70, "Print",ExpressionUUID->"e52a606d-373f-4f3a-b0e1-3987b852000b"],
+Cell[20644, 563, 2142, 57, 40, "Print",ExpressionUUID->"30104d93-0520-41e5-96db-3899beb4c194"],
+Cell[22789, 622, 2709, 68, 100, "Print",ExpressionUUID->"b9365209-d062-496e-bdf2-2127a79d01d3"],
+Cell[25501, 692, 1127, 32, 63, "Print",ExpressionUUID->"03cab958-3485-4bf2-9ad2-0324875c41d2"]
+}, Open  ]]
+}, Open  ]],
+Cell[26655, 728, 160, 3, 46, "Input",ExpressionUUID->"72e6edd1-fc03-4406-a903-0f8673ab1d94"],
+Cell[CellGroupData[{
+Cell[26840, 735, 10429, 278, 808, "Input",ExpressionUUID->"7f23a426-5a4b-43b4-beea-62bff93ceea6"],
+Cell[CellGroupData[{
+Cell[37294, 1017, 3720, 90, 66, "Print",ExpressionUUID->"bee027be-d72b-4efd-9fe5-eff4d5137884"],
+Cell[41017, 1109, 4584, 117, 84, "Print",ExpressionUUID->"98b8b2d2-8c84-4d7f-9e50-4c4546099eb6"],
+Cell[45604, 1228, 4546, 113, 84, "Print",ExpressionUUID->"4d46c790-6b7d-4101-9d25-784d0cec94e5"],
+Cell[50153, 1343, 6307, 155, 129, "Print",ExpressionUUID->"4b23b37b-0256-4511-9f87-6c58919ccd17"],
+Cell[56463, 1500, 3331, 80, 69, "Print",ExpressionUUID->"e459f544-747d-4384-ab1f-79f8a64471c1"],
+Cell[59797, 1582, 3883, 94, 73, "Print",ExpressionUUID->"5bf755fb-3afa-4354-86b1-294127caded7"],
+Cell[63683, 1678, 4608, 116, 129, "Print",ExpressionUUID->"f7225b13-7630-47ad-af37-ea026db4844f"],
+Cell[68294, 1796, 2580, 66, 75, "Print",ExpressionUUID->"63ffd4bf-4b6f-4034-a1f4-4da446d1f607"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
