@@ -1,0 +1,9 @@
+Solving the cahn hilliard problem.
+
+dc/dt = div(M*grad(mu))
+
+\mu = df/dc - k*\Delta c
+
+M d\mu/dn = 0.
+
+dc/dn = 0.
