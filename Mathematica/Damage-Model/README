@@ -1,3 +1,10 @@
 This folder contains the codes used in writing the damage model paper.
 
 It contains both new and old codes. The reason for including both is beause of the saved initialized parameters in the code. 
+
+The graduate student i was working with was Ihina. I was working separately on a damage model. The use of Ihina was to distinguish between the two.
+
+The files here are:
+1. Damaged Model.xlsx :-
+This contains all the necessary data needed to construct the d(H,T) and c(H,T) plot. This was obtained by runinning Ihina#-Vol Fraction vs Damage.nb. 
+
