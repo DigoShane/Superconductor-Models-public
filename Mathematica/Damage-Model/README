@@ -12,9 +12,14 @@ The files here are:
 1. Damaged Model.xlsx :-
 This contains all the necessary data needed to construct the d(H,T) and c(H,T) plot. This was obtained by runinning Ihina#-Vol Fraction vs Damage.nb. 
 
-2. Ihina2-Vol Fraction vs Damage and Ihina3-Vol Fraction vs Damage :-
+2. Ihina2-Vol Fraction vs Damage.nb, Ihina3-Vol Fraction vs Damage.nb, Revist Fischer's paper.nb :-
 This code takes data from Fischer's paer, and uses it to fit parameters in our damage model. We fit Fig. 6 and 9 from Fischer's paper here.
 
 3.Revisit-CandDvsHandT.nb
 This is the file that is used to construct the result for our Damage model paper.
+
+4. Selva-VolFractionVsDamage.nb :-
+This code is fitting our damage model to data that prof. selva has. 
+This is not available information publically. This was privately shared. But the data is authentic and can be trusted.
+We used this to determine that n, which is a universal constant dependeing on the source and not the material, is the selected value in our paper.
 
