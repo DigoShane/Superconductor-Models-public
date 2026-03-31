@@ -4,7 +4,16 @@ It contains both new and old codes. The reason for including both is beause of t
 
 The graduate student i was working with was Ihina. I was working separately on a damage model. The use of Ihina was to distinguish between the two.
 
+The publication is available in:
+
+
+
 The files here are:
 1. Damaged Model.xlsx :-
 This contains all the necessary data needed to construct the d(H,T) and c(H,T) plot. This was obtained by runinning Ihina#-Vol Fraction vs Damage.nb. 
+
+2. Ihina2-Vol Fraction vs Damage and Ihina3-Vol Fraction vs Damage :-
+This code takes data from Fischer's paer, and uses it to fit parameters in our damage model. We fit Fig. 6 and 9 from Fischer's paper here.
+
+3.
 
