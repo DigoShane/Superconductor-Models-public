@@ -1,5 +1,6 @@
 #Here we solve the 2D Ginzbug Landau problem with an applied magnetic field.
-#We are interested in the perturbed solution.
+#We are interested in the perturbed solution. We treat the gurtin term as a perturbation to the Ginzburg landau term.
+#For the gurtin term check the PNAS Nexus paper involving the coexistence of magnetism and superconductivity.
 #------------------------------------------------------------------------------------------------------
 # For details on progress, visit UH OneNote. superConductivity/Coding/ perturbative gurtin tensor - theory
 #Check p13 onwards.
