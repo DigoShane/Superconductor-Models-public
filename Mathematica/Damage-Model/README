@@ -15,5 +15,6 @@ This contains all the necessary data needed to construct the d(H,T) and c(H,T) p
 2. Ihina2-Vol Fraction vs Damage and Ihina3-Vol Fraction vs Damage :-
 This code takes data from Fischer's paer, and uses it to fit parameters in our damage model. We fit Fig. 6 and 9 from Fischer's paper here.
 
-3.
+3.Revisit-CandDvsHandT.nb
+This is the file that is used to construct the result for our Damage model paper.
 
