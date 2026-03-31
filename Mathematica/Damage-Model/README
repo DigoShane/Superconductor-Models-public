@@ -30,3 +30,5 @@ IT turned out that this model didnt give us any useful result. The problem was w
 
 6. StokesFlow-SpheroidalInclusion.nb :-
 This is the same as the above, but with a spheroidal inclusion.
+
+7. c and d values by fixing n from Selva's 2 -> used to draw the final c(H,T) and d(H,T) model.
