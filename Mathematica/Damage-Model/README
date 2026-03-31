@@ -34,4 +34,5 @@ This is the same as the above, but with a spheroidal inclusion.
 7. c and d values by fixing n from Selva's 2 -> used to draw the final c(H,T) and d(H,T) model.
 
 8. phi vs T & fl vs H and T :-
+This file was used to construct Fig. 6 in our paper.
 This file, after running is 118 MB, so i had to delete all the output and/or compress it to get it below 25MB.
