@@ -23,3 +23,10 @@ This code is fitting our damage model to data that prof. selva has.
 This is not available information publically. This was privately shared. But the data is authentic and can be trusted.
 We used this to determine that n, which is a universal constant dependeing on the source and not the material, is the selected value in our paper.
 
+5. StokesFlow-SphericalInclusion.nb :-
+This is code to verify the solution of Stokes Flow over spherical inclusion in an infinte medium. 
+We also used this to test the model of critical current in a superconductor if the inlcusion is sphereical.
+IT turned out that this model didnt give us any useful result. The problem was with picking infinite domain. The effect of the inclusion vanished.
+
+6. StokesFlow-SpheroidalInclusion.nb :-
+This is the same as the above, but with a spheroidal inclusion.
